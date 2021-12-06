@@ -1,0 +1,12 @@
+<section class="card">
+    <div class="card-body">
+        <{{headerTag}} class="card-title">
+        {{#if href}}
+          <a href="{{href}}">{{{heading}}}</a>
+        {{else}}
+          {{{heading}}}
+        {{/if}}
+        </{{headerTag}}>
+        <p class="card-text">{{{content}}}</p>
+    </div> {{#if footer}}<div class="card-footer">{{footer}}</div>{{/if}}
+</section>

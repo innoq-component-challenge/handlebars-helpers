@@ -1,0 +1,54 @@
+<h1>Badges</h1>
+<div> This is a {{{badge type="danger" caption="Badge"}}}
+</div>
+<h1 class="mt-5">Buttons</h1>
+{{#button}}Simple preact-button{{/button}}
+<hr />
+{{#button cta="1" additionalClasses="text-uppercase"}}CTA preact-button with uppercase{{/button}}
+<hr />
+{{#button data-foo="bar" aria-live="polite"}}preact-button with additional attributes{{/button}}
+<hr />
+{{#button type="button" name="action" value="delete"}}preact-button with name and value{{/button}}
+
+<h1 class="mt-5">Cards</h1>
+{{#card headingLevel="2" footer="This is the footer!"}}
+  {{#*inline "heading"}}
+    <span lang="de">Großartige</span> {{{badge caption="Card"}}}</span>
+  {{/inline}}
+  Welcome to the <strong>best card</strong>
+{{/card}}
+<hr />
+{{#card headingLevel="2" heading="Another card with a link as header" href="#foo"}} Content baby! {{/card}}
+<h1 class="mt-5">List</h1>
+{{list}}
+<h1 class="mt-5">MagicHeaders</h1>
+{{#mhSection}}
+    <article>
+        <header>
+            {{#mhHeading headingLevel=headingLevel}}Some h1{{/mhHeading}}
+            <p class="tagline"> Content </p>
+        </header>
+        {{#mhSection parentHeadingLevel=headingLevel}}
+            <section>
+                {{#mhHeading headingLevel=headingLevel}}Some h2{{/mhHeading}}
+            </section>
+            <p>Some more content</p>
+            {{#mhSection parentHeadingLevel=headingLevel}}
+                <div class="foo bar">
+                    {{#mhHeading headingLevel=headingLevel}}Some h3{{/mhHeading}}
+                </div>
+                <p>Some more content</p>
+            {{/mhSection}}
+        {{/mhSection}}
+        {{#mhSection parentHeadingLevel=headingLevel}}
+            <section>
+                {{#mhHeading headingLevel=headingLevel}}Again some h2{{/mhHeading}}
+            </section>
+            <p>Some more content</p>
+        {{/mhSection}}
+    </article>
+{{/mhSection}}
+<h1 class="mt-5">Form Group</h1>
+{{{fieldGroup label="Very Simple!" name="test"}}}
+<hr>
+{{{fieldGroup type="email" id="my-email" label="eMail" name="users_email" value="BOOM" error="'BOOM' is not a valid eMail addreess"}}}
